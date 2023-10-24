@@ -1,0 +1,16 @@
+class Solution {
+public:
+    string longestCommonPrefix(vector<string>& strs) {
+        ios::sync_with_stdio(false);
+        cin.tie(nullptr);
+        cout.tie(nullptr);
+        sort(strs.begin(),strs.end());string ans = "";
+        string first = strs[0],last = strs[strs.size()-1];
+       for(int i =0;i<min(first.size(),last.size());i++)
+       {
+           if(first[i]!=last[i]){return ans;}
+           ans+=first[i];
+       }
+        return ans;
+    }
+};
